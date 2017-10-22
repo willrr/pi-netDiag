@@ -8,9 +8,10 @@ import struct
 import shlex
 from subprocess import Popen, PIPE, STDOUT
 root = tkinter.Tk()
-root.geometry('480x320')
+#root.geometry('480x320')
+root.attributes('-fullscreen', True)
 root.title("Network Tester")
-ifname='enp1s0'
+ifname='eth0'
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 def internalIP():
   o = socket.inet_ntoa(fcntl.ioctl(s.fileno(),0x8915,struct.pack(b'256s', bytes(ifname[:15], 'utf-8')))[20:24])
