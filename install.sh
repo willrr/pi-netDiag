@@ -4,7 +4,7 @@
 cd /home/pi
 sudo apt-get -y install python3-tk fping vim unzip
 cd ./pi-networkDiagnostics/
-cat > launcher.sh
+#cat > launcher.sh
 echo "#!/bin/sh" >> launcher.sh
 echo "# launcher.sh" >> launcher.sh
 echo "cd /" >> launcher.sh
