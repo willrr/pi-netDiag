@@ -47,7 +47,6 @@ def get_ping_time(host):
   host = host.split(':')[0] #split ping address into an array
   cmd = "fping {host} -C 3 -q".format(host=host) #run command fping for host array fping is used to simplify the output down to just ping times -C is the amount of times and -q simplifies the output
   res = [float(x) for x in get_simple_cmd_output(cmd).strip().split(b':')[-1].split() if x != b'-'] #get the output and store it (each ping stored in the array)
-  print(res)
   if len(res) > 0:
     return sum(res) / len(res) #divide the sum of the output and divide by the amount in the string
   else:
