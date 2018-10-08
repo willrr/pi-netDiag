@@ -1,7 +1,7 @@
 # pi-networkDiagnostics
-Python network diagnotics tool
+Python network diagnostics tool
 
-Built on linux
+Built for Linux
 
 Requires Tkinter and fping packages;
 
